@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 const useAxios = (param) => {
   const [response, setResponse] = useState([]);
@@ -10,7 +10,7 @@ const useAxios = (param) => {
 
   const fetchData = async (url) => {
     try {
-      isLoading(true);
+      setIsLoading(true);
       const res = await axios(url);
       setResponse(res.data.results);
     } catch (err) {

@@ -1,22 +1,26 @@
-import { createContext } from "react";
-import useAxios from "./hooks/useAxios";
+import { createContext, useState } from "react";
+import Images from "./components/Images";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
-import Images from "./components/Images";
+import useAxios from "./hooks/useAxios";
 
 export const ImageContext = createContext();
 
 function App() {
+  const [searchImage, setSearchImage] = useState("Flowers");
+
+  const apiKey = `qn2LsI-bJTEnx44LucSPsyHE_O2k0Ry54OkdsHZEtNE`;
   const { response, isLoading, error, fetchData } = useAxios(
-    `search/photos?page=1&query=cats&client_id=${process.env.REACT_APP_ACCESS_KEY}`
+    `search/photos?page=1&query=${searchImage}&client_id=${apiKey}`
   );
-  console.log(response);
 
   const value = {
     response,
     isLoading,
     error,
     fetchData,
+    searchImage,
+    setSearchImage,
   };
 
   return (

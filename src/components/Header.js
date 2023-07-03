@@ -1,6 +1,3 @@
-import React from "react";
-import SearchBar from "./SearchBar";
-
 const Header = ({ children }) => {
   return (
     <div className="bg-black flex items-center py-10">
