@@ -1,10 +1,21 @@
 const Header = ({ children }) => {
   return (
-    <div className="bg-black flex items-center py-10">
-      <div className="max-w-md mx-auto w-full">
-        <h1 className="text-white text-center text-2xl font-bold mb-5">
-          Image Gallery
+    <div className="flex items-center py-8">
+      <div className="max-w-md w-full mx-auto">
+        <h1 className="text-center text-4xl tracking-[3px]">
+          ❀ Image Gallery ❀
         </h1>
+        <p className="text-center text-[11px] mb-3">
+          <a
+            href="https://github.com/viktoriia-yash/image-gallery-react"
+            className="github"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Open-source code
+          </a>{" "}
+          by Viktoriia Yashkina
+        </p>
         {children}
       </div>
     </div>

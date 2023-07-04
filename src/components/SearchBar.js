@@ -27,9 +27,8 @@ const SearchBar = ({ children }) => {
 
   return (
     <div className="flex">
-      <label htmlFor="site-search">Search the site:</label>
       <input
-        className="bg-gray-50 border border-gray-300 text-sm w-full indent-2 p-2.5 outline-none focus:border-blue-500 focus:ring-2 rounded-tl rounded-bl"
+        className="w-full p-2.5 mr-3 outline-none text-sm"
         type="search"
         placeholder="Search Anything..."
         value={searchValue}
@@ -37,7 +36,7 @@ const SearchBar = ({ children }) => {
         onKeyDown={handleEnterSearch}
       />
       <button
-        className="bg-blue-600 px-6 py-2.5 text-white rounded-tr rounded-br focus:ring-2 focus:ring-blue-300 disabled-bg-gray-400"
+        className="px-3 cursor-pointer"
         onClick={handleButtonSearch}
         disabled={!searchValue}
       >

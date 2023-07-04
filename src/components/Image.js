@@ -4,7 +4,7 @@ const Image = ({ data }) => {
       <img
         src={data.urls.small}
         alt={data.alt_description}
-        className="h-72 w-full object-cover rounded-lg shadow-md"
+        className="h-72 w-full object-cover"
       />
     </a>
   );

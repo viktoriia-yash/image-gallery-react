@@ -7,7 +7,7 @@ import useAxios from "./hooks/useAxios";
 export const ImageContext = createContext();
 
 function App() {
-  const [searchImage, setSearchImage] = useState("Flowers");
+  const [searchImage, setSearchImage] = useState("Green");
 
   const apiKey = `qn2LsI-bJTEnx44LucSPsyHE_O2k0Ry54OkdsHZEtNE`;
   const { response, isLoading, error, fetchData } = useAxios(
